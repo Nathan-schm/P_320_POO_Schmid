@@ -1,0 +1,151 @@
+{
+  "projectName": "P_320_POO_Journal_Travail",
+  "me": "Nathan-schm",
+  "journalStartDate": "2026-08-28T11:10:00.000Z",
+  "columns": [
+    {
+      "label": "Date",
+      "source": "date",
+      "format": "date",
+      "field": "date"
+    },
+    {
+      "label": "Tâche",
+      "source": "name",
+      "field": "name"
+    },
+    {
+      "label": "Description",
+      "source": "description",
+      "field": "description"
+    },
+    {
+      "label": "Durée",
+      "source": "duration",
+      "format": "duration",
+      "field": "duration"
+    },
+    {
+      "label": "Statut",
+      "source": "status",
+      "format": "badge",
+      "field": "status"
+    },
+    {
+      "label": "Auteur",
+      "source": "author"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "62ac9477-dbe3-4806-b128-ab0eaa5a4a92",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-08-28T13:15:00.000Z",
+      "name": "introduction au cours",
+      "description": "Le prof nous a expliqué comment allait se dérouler le projet durant ce trimestre.",
+      "duration": 90,
+      "status": "DONE"
+    },
+    {
+      "id": "05deaac7-3601-464a-926f-252f205c8d90",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-04T11:40:00.000Z",
+      "name": "Rapport",
+      "description": "Création du rapport, Ajout des Analyses, planification, maquettes, Introduction etc etc",
+      "duration": 70,
+      "status": "WIP"
+    },
+    {
+      "id": "995a88c7-c52c-4275-b1ba-a2d5b039faeb",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-04T13:08:00.000Z",
+      "name": "Projet - Kanban US",
+      "description": "Création du Kanban sur github, invitation du chef de projet au Kanban",
+      "duration": 15,
+      "status": "DONE"
+    },
+    {
+      "id": "5cc1db53-750b-4cf1-bffe-27cb46d84d8b",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-08-28T14:00:00.000Z",
+      "name": "thème ",
+      "description": "Recherche de thème pour le jeu",
+      "duration": 45,
+      "status": "DONE"
+    },
+    {
+      "id": "3c42e4cc-b942-4877-9b17-f990f122f77f",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-08-28T14:30:00.000Z",
+      "name": "journal de travail",
+      "description": "Création du journal de travail sur Gitjournal",
+      "duration": 20,
+      "status": "DONE"
+    },
+    {
+      "id": "0549b842-7f76-4bd7-9b59-5d06028784d3",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-08-28T14:20:00.000Z",
+      "name": "Github",
+      "description": "Création du projet Repo sur Github",
+      "duration": 15,
+      "status": "DONE"
+    },
+    {
+      "id": "bbb8186e-3e05-4d1d-b6dc-7b918d1e2bf3",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-08-28T14:32:00.000Z",
+      "name": "Commit",
+      "description": "Premier commit de docs sur ce projet",
+      "duration": 10,
+      "status": "DONE"
+    },
+    {
+      "id": "c4e8bf1c-c5ca-4002-97a9-a9e8c4cfacbd",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-04T14:19:00.000Z",
+      "name": "Journal de travail",
+      "description": "Ajout de toutes les tâches effectuées durant l'après-midi du projet",
+      "duration": 20,
+      "status": "DONE"
+    },
+    {
+      "id": "f497989d-4136-4097-90b0-65e80d997926",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-04T14:21:00.000Z",
+      "name": "Maquettes",
+      "description": "Terminer les maquettes + les photos des maquettes pour les US",
+      "duration": 30,
+      "status": "WIP"
+    },
+    {
+      "id": "561f1d58-35ff-414f-b5ad-9c7b5c337104",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-04T14:22:00.000Z",
+      "name": "Gitstodoc",
+      "description": "Installation de Gitstodoc pour que les US se transforment en .docx",
+      "duration": 10,
+      "status": "DONE"
+    },
+    {
+      "id": "212d64cf-fdcb-418c-b3e7-b2ff3e319c7e",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-04T12:28:00.000Z",
+      "name": "Thème",
+      "description": "Recherche de nouvelle info pour mon jeu, 5 block, les tirs des guêpes etc etc",
+      "duration": 35,
+      "status": "DONE"
+    }
+  ]
+}
