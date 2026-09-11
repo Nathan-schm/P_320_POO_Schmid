@@ -146,6 +146,66 @@
       "description": "Recherche de nouvelle info pour mon jeu, 5 block, les tirs des guêpes etc etc",
       "duration": 35,
       "status": "DONE"
+    },
+    {
+      "id": "2c896920-84d4-497b-b131-f5bfcb7b8543",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-11T14:06:00.000Z",
+      "name": "US - Ennemis",
+      "description": "US sur les ennemis, leurs différent type et leurs projectiles",
+      "duration": 45,
+      "status": "DONE"
+    },
+    {
+      "id": "a06150b6-c7fb-4d8f-8415-768f87c7e55b",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-11T14:31:00.000Z",
+      "name": "US - Score",
+      "description": "Score du joueur",
+      "duration": 20,
+      "status": "DONE"
+    },
+    {
+      "id": "0de4d10d-48aa-4c16-9e71-16ef1dcaad5f",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-11T14:31:00.000Z",
+      "name": "US - Victoire",
+      "description": "victoire de fin avec écran",
+      "duration": 30,
+      "status": "DONE"
+    },
+    {
+      "id": "3c2df417-0e31-46b3-81d3-7a6b043a3e2e",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-11T14:32:00.000Z",
+      "name": "US - Défaite",
+      "description": "défaite du joueur avec écran de fin",
+      "duration": 30,
+      "status": "DONE"
+    },
+    {
+      "id": "b0ab2a44-49c6-4118-afc8-1ddbed9b0860",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-11T14:32:00.000Z",
+      "name": "Rapport de projet ",
+      "description": "fin de la planification ",
+      "duration": 35,
+      "status": "DONE"
+    },
+    {
+      "id": "973a0ed4-c89c-41f7-aa59-34d1478a1a20",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-11T14:32:00.000Z",
+      "name": "JDT",
+      "description": "remplir le journal de travail",
+      "duration": 20,
+      "status": "DONE"
     }
   ]
 }
