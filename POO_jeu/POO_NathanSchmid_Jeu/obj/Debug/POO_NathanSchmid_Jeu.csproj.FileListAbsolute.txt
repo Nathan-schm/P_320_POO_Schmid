@@ -1,0 +1,8 @@
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\obj\Debug\POO_NathanSchmid_Jeu.csproj.AssemblyReference.cache
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\obj\Debug\POO_NathanSchmid_Jeu.csproj.CoreCompileInputs.cache
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\bin\Debug\POO_NathanSchmid_Jeu.exe.config
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\bin\Debug\POO_NathanSchmid_Jeu.exe
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\bin\Debug\POO_NathanSchmid_Jeu.pdb
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\obj\Debug\POO_NathanSchmid_Jeu.exe
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\obj\Debug\POO_NathanSchmid_Jeu.pdb
+C:\Users\px61pje\Documents\GitHub\P_320_POO_Schmid\POO_jeu\POO_NathanSchmid_Jeu\POO_NathanSchmid_Jeu\obj\Debug\POO_NathanSchmid_Jeu.exe.config
