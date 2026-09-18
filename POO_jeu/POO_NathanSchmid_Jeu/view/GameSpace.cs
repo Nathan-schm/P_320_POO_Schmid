@@ -33,10 +33,10 @@ namespace POO_NathanSchmid_Jeu.view
             _gamespace.Render();
         }
 
-        private void NewFrame(object sender, EventArgs e) 
+        private void tmrRender_Tick(object sender, EventArgs e)
         {
             this.Render();
-        }
 
+        }
     }
 }

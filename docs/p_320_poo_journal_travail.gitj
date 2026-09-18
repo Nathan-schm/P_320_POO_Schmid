@@ -206,6 +206,56 @@
       "description": "remplir le journal de travail",
       "duration": 20,
       "status": "DONE"
+    },
+    {
+      "id": "c5689f29-7139-422a-9c1b-040c49ccd741",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-18T11:21:00.000Z",
+      "name": "Début du code",
+      "description": "Création du fichier pour le code du jeu",
+      "duration": 20,
+      "status": "DONE"
+    },
+    {
+      "id": "eda1fde5-f858-4071-9272-88a3ea7844de",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-18T13:22:00.000Z",
+      "name": "Personnage",
+      "description": "Création du fichier du personnage, et test de l'affichage ",
+      "duration": 60,
+      "status": "DONE"
+    },
+    {
+      "id": "a6daaf15-bf6f-4b76-ba46-474bd1027437",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-18T14:23:00.000Z",
+      "name": "JDT",
+      "description": "mise à jour du journal de travail",
+      "duration": 10,
+      "status": "DONE"
+    },
+    {
+      "id": "fcf9b03b-dd6d-49bf-84df-9eff2dd8ac09",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-18T14:21:00.000Z",
+      "name": "Projet de base ",
+      "description": "Changement du fichier et repartir a zero sur le fichier de base",
+      "duration": 30,
+      "status": "WIP"
+    },
+    {
+      "id": "11fcb4ba-d6db-42ef-978d-3893fcf3ab61",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-18T13:55:00.000Z",
+      "name": "Fichier code",
+      "description": "Essai d'affichage du joueur, correction des problèmes avec le Prof",
+      "duration": 60,
+      "status": "DONE"
     }
   ]
 }
