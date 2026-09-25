@@ -11,4 +11,6 @@ public class Config
 	public const int PLAYER_WIDTH = 80;
     public const int PLAYER_HEIGHT = 80;
 
+	public const int PLAYER_SPEED = 10;
+
 }

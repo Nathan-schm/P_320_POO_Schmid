@@ -8,7 +8,6 @@ namespace Drones
     {
         public int x;                                 // Position en X depuis la gauche de l'espace aérien
         public int y;                                 // Position en Y depuis le haut de l'espace aérien
-        public int speed_x;                           // Déplacement horizontal
 
         // Constructeur
         public Drone(int x, int y)
@@ -24,17 +23,17 @@ namespace Drones
         // que 'interval' millisecondes se sont écoulées
         public void Update(int interval)
         {
-            x += speed_x;   
+            
         }
 
         // Choisit une nouvelle vitesse aléatoirement
         public void DirectionLeft()
         {
-            x-=10;
+            x-= Config.PLAYER_SPEED;
         }
         public void DirectionRight()
         {
-            x += 10;
+            x += Config.PLAYER_SPEED;
         }
 
         // De manière graphique
