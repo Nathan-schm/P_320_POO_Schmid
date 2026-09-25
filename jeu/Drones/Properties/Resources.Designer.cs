@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace POO_NathanSchmid_Jeu.Properties {
+namespace Drones.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace POO_NathanSchmid_Jeu.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("POO_NathanSchmid_Jeu.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Drones.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,29 @@ namespace POO_NathanSchmid_Jeu.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap squirrel {
+        internal static System.Drawing.Bitmap branche {
             get {
-                object obj = ResourceManager.GetObject("squirrel", resourceCulture);
+                object obj = ResourceManager.GetObject("branche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap branche1 {
+            get {
+                object obj = ResourceManager.GetObject("branche1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drone {
+            get {
+                object obj = ResourceManager.GetObject("drone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
