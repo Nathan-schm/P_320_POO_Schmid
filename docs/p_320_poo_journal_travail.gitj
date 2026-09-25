@@ -256,6 +256,56 @@
       "description": "Essai d'affichage du joueur, correction des problèmes avec le Prof",
       "duration": 60,
       "status": "DONE"
+    },
+    {
+      "id": "0d6c2a06-6c59-462e-8583-21c9dce39604",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-25T11:25:00.000Z",
+      "name": "Fichier jeu",
+      "description": "Essay de réparer le fichier du jeu",
+      "duration": 45,
+      "status": "DONE"
+    },
+    {
+      "id": "fde5965d-efa8-42d2-b30e-c0c1f2128b0f",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-25T12:13:00.000Z",
+      "name": "Joueur",
+      "description": "Ajout du joueur et recherche de comment faire les déplacements",
+      "duration": 45,
+      "status": "DONE"
+    },
+    {
+      "id": "176ffd26-f157-4ad5-92d7-c1cf28f4e84d",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-25T13:30:00.000Z",
+      "name": "US01 déplacement",
+      "description": "Déplacement joueur terminé",
+      "duration": 60,
+      "status": "DONE"
+    },
+    {
+      "id": "435ce863-1005-4f43-a303-85d3adf64a32",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-25T14:32:00.000Z",
+      "name": "fond de jeu",
+      "description": "Ajout du fond du jeu avec une image d'arbre",
+      "duration": 25,
+      "status": "DONE"
+    },
+    {
+      "id": "d39cbcd5-8c77-4577-81da-114da19098c9",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-09-25T14:33:00.000Z",
+      "name": "JDT",
+      "description": "mise à jour du journal de travail",
+      "duration": 5,
+      "status": "DONE"
     }
   ]
 }
