@@ -261,7 +261,7 @@
       "id": "0d6c2a06-6c59-462e-8583-21c9dce39604",
       "type": "commitless",
       "author": "Nathan-schm",
-      "date": "2026-09-25T11:25:00.000Z",
+      "date": "2026-09-25T11:55:00.000Z",
       "name": "Fichier jeu",
       "description": "Essay de réparer le fichier du jeu",
       "duration": 45,
@@ -305,6 +305,46 @@
       "name": "JDT",
       "description": "mise à jour du journal de travail",
       "duration": 5,
+      "status": "DONE"
+    },
+    {
+      "id": "e2b2c6dd-e948-4a4e-8db8-a7cbb2ba0352",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-02T12:20:00.000Z",
+      "name": "US 02 Ennemis",
+      "description": "Ajout des fichiers ennemis, essais de déplacement",
+      "duration": 60,
+      "status": "DONE"
+    },
+    {
+      "id": "30fb6dc3-15a0-40ab-8789-093657311f27",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-02T13:32:00.000Z",
+      "name": "US 02 Ennemis",
+      "description": "Ajout de plusieurs ennemis normaux avec leurs déplacement, et qu'ils peuvent pas sortir de la fenêtre",
+      "duration": 60,
+      "status": "DONE"
+    },
+    {
+      "id": "0e8b281d-25f8-4494-8b2e-4159b4801036",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-02T14:27:00.000Z",
+      "name": "US 02 Ennemis",
+      "description": "Mettre la position des ennemis en random",
+      "duration": 45,
+      "status": "DONE"
+    },
+    {
+      "id": "9ba8bf03-60c8-47f1-9418-c3fb07e99e21",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-02T14:30:00.000Z",
+      "name": "JDT",
+      "description": "mise à jour du JDT",
+      "duration": 15,
       "status": "DONE"
     }
   ]
