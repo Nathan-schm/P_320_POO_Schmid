@@ -1,5 +1,6 @@
 ﻿using Drones.Helpers;
 using Drones.Properties;
+using System.Configuration;
 
 namespace Drones
 {
@@ -12,7 +13,6 @@ namespace Drones
         // Constructeur
         public Drone(int x, int y)
         {
-            Random alea = new Random();
             this.x = x;
             this.y = y;
             DirectionLeft();
@@ -29,11 +29,27 @@ namespace Drones
         // Choisit une nouvelle vitesse aléatoirement
         public void DirectionLeft()
         {
-            x-= Config.PLAYER_SPEED;
+            if(x - Config.PLAYER_SPEED <= 0 + (Config.PLAYER_WIDTH/2)+80)
+            {
+                x -= 0;
+            }
+            else
+            {
+                x -= Config.PLAYER_SPEED;
+            }
         }
         public void DirectionRight()
         {
-            x += Config.PLAYER_SPEED;
+
+            if (x + Config.PLAYER_SPEED >= Config.AIRSPACE_WIDTH - Config.PLAYER_WIDTH / 2)
+            {
+                x -= 0;
+            }
+            else
+            {
+                x += Config.PLAYER_SPEED;
+            }
+                
         }
 
         // De manière graphique
@@ -41,8 +57,5 @@ namespace Drones
         {
             drawingSpace.Graphics.DrawImage(Resources.drone, x - (Config.PLAYER_WIDTH/2), y - (Config.PLAYER_HEIGHT/2), Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
         }
-
-
-
     }
 }
