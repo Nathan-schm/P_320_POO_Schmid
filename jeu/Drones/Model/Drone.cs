@@ -19,14 +19,13 @@ namespace Drones
             DirectionRight();
         }
 
-        // Cette méthode calcule le nouvel état dans lequel le drone se trouve après
-        // que 'interval' millisecondes se sont écoulées
+        // Cette méthode calcule le nouvel état dans lequel le joueur se trouve pour chaque frame
         public void Update(int interval)
         {
             
         }
 
-        // Choisit une nouvelle vitesse aléatoirement
+        // Déplace le joueur à gauche dans les cadre de la fenêtre
         public void DirectionLeft()
         {
             if(x - Config.PLAYER_SPEED <= 0 + (Config.PLAYER_WIDTH/2)+80)
@@ -38,6 +37,8 @@ namespace Drones
                 x -= Config.PLAYER_SPEED;
             }
         }
+
+        // Déplace le joueur à droite dans les cadre de la fenêtre
         public void DirectionRight()
         {
 

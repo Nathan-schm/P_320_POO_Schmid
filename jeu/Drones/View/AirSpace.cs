@@ -11,6 +11,8 @@ namespace Drones
 
         // Le joueur 
         private Drone _player;
+
+        // L'ennemis
         private List <Ennemi> _enemy;
 
         BufferedGraphicsContext currentContext;
@@ -65,6 +67,8 @@ namespace Drones
             this.Render();
         }
 
+
+        // Regarde quelles touches sont appuyée pour et envoie a la méthode en lien
         private void AirSpace_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)

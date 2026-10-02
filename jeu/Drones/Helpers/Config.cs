@@ -2,6 +2,7 @@
 using System.Media;
 using System.Security.Cryptography.X509Certificates;
 
+// Class qui permet de stocker toutes les constantes utiles pour le projet
 public class Config
 {
 
@@ -11,7 +12,7 @@ public class Config
 	public const int PLAYER_WIDTH = 80;
     public const int PLAYER_HEIGHT = 80;
 
-	public const int PLAYER_SPEED = 10;
+	public const int PLAYER_SPEED = 5;
 
 	public const int ENNEMI_SPEED = 10;
 
