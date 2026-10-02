@@ -8,12 +8,22 @@ namespace Drones
         [STAThread]
         static void Main()
         {
+            int x = 0;
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+            Drone player = new Drone(Config.AIRSPACE_WIDTH/2, 70);
+
+            List<Ennemi> enemy = new List<Ennemi>();
+            for (int i = 0; i <3 ; i++)
+            {
+                enemy.Add(new Ennemi(Config.AIRSPACE_WIDTH /2 +x , Config.AIRSPACE_HEIGHT /2 +x));
+                x += 100;
+            }
+
             // Démarrage
-            Application.Run(new AirSpace(new Drone(Config.AIRSPACE_WIDTH /2 , 65 )));
+            Application.Run(new AirSpace(player,enemy ));
         }
     }
 }

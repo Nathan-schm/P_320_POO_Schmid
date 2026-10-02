@@ -13,4 +13,6 @@ public class Config
 
 	public const int PLAYER_SPEED = 10;
 
+	public const int ENNEMI_SPEED = 10;
+
 }

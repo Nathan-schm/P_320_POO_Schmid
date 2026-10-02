@@ -9,14 +9,15 @@ namespace Drones
     public partial class AirSpace : Form
     {
 
-        // La flotte est l'ensemble des drones qui évoluent dans notre espace aérien
+        // Le joueur 
         private Drone _player;
+        private List <Ennemi> _enemy;
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics airspace;
 
         // Initialisation de l'espace aérien avec un certain nombre de drones
-        public AirSpace(Drone player)
+        public AirSpace(Drone player, List <Ennemi> enemy)
         {
             InitializeComponent();
             ClientSize = new Size(Config.AIRSPACE_WIDTH, Config.AIRSPACE_HEIGHT);
@@ -27,6 +28,7 @@ namespace Drones
             // dimensions the same size as the drawing surface of the form.
             airspace = currentContext.Allocate(this.CreateGraphics(), this.DisplayRectangle);
             this._player = player;
+            this._enemy = enemy;
         }
 
         // Affichage de la situation actuelle
@@ -36,6 +38,12 @@ namespace Drones
             airspace.Graphics.DrawImage(Resources.branche1, 0,0,Config.AIRSPACE_WIDTH,143);
 
             _player.Render(airspace);
+            
+            foreach(Ennemi ennemi in _enemy)
+            {
+                ennemi.Render(airspace);
+            }
+
 
             airspace.Render();
         }
@@ -44,6 +52,10 @@ namespace Drones
         private void Update(int interval)
         {
             _player.Update(interval);
+            foreach (Ennemi ennemi in _enemy)
+            {
+                ennemi.Update(interval);
+            }
         }
 
         // Méthode appelée à chaque frame
