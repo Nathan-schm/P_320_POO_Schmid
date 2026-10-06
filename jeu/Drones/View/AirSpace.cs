@@ -13,13 +13,13 @@ namespace Drones
         private Drone _player;
 
         // L'ennemis
-        private List <Ennemi> _enemy;
+        private List<Ennemi> _enemy;
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics airspace;
 
         // Initialisation de l'espace aérien avec un certain nombre de drones
-        public AirSpace(Drone player, List <Ennemi> enemy)
+        public AirSpace(Drone player, List<Ennemi> enemy)
         {
             InitializeComponent();
             ClientSize = new Size(Config.AIRSPACE_WIDTH, Config.AIRSPACE_HEIGHT);
@@ -37,11 +37,13 @@ namespace Drones
         private void Render()
         {
             airspace.Graphics.Clear(Color.White);
-            airspace.Graphics.DrawImage(Resources.branche1, 0,0,Config.AIRSPACE_WIDTH,143);
+            airspace.Graphics.DrawImage(Resources.fond, 0, 0, Config.AIRSPACE_WIDTH, Config.AIRSPACE_HEIGHT);
+            airspace.Graphics.DrawImage(Resources.branche1, 0, 0, Config.AIRSPACE_WIDTH, 143);
+            
 
             _player.Render(airspace);
-            
-            foreach(Ennemi ennemi in _enemy)
+
+            foreach (Ennemi ennemi in _enemy)
             {
                 ennemi.Render(airspace);
             }
@@ -95,6 +97,11 @@ namespace Drones
                     _player.DirectionRight();
                     break;
             }
+        }
+
+        private void AirSpace_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
