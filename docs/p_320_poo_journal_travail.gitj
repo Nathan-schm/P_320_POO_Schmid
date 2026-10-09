@@ -346,6 +346,26 @@
       "description": "mise à jour du JDT",
       "duration": 15,
       "status": "DONE"
+    },
+    {
+      "id": "5f87aaf6-6b95-421c-bfb3-fb47cb8fde4c",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-09T12:00:00.000Z",
+      "name": "US 04",
+      "description": "Repositionnement des ennemis",
+      "duration": 50,
+      "status": "DONE"
+    },
+    {
+      "id": "61ff88ce-162a-4102-9a01-ff5b565b4847",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-09T12:42:00.000Z",
+      "name": "US 02",
+      "description": "Ajout de la classe des Tirs du joueurs",
+      "duration": 45,
+      "status": "WIP"
     }
   ]
 }
