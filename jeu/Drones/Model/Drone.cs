@@ -7,14 +7,16 @@ namespace Drones
     // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
     public class Drone
     {
-        public int x;                                 // Position en X depuis la gauche de l'espace aérien
-        public int y;                                 // Position en Y depuis le haut de l'espace aérien
+        public int _x;                                 // Position en X depuis la gauche de l'espace aérien
+        public int _y;                                 // Position en Y depuis le haut de l'espace aérien
+
+        public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2, _y - Config.PLAYER_HEIGHT/2, Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
 
         // Constructeur
         public Drone(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this._x = x;
+            this._y = y;
             DirectionLeft();
             DirectionRight();
         }
@@ -28,13 +30,13 @@ namespace Drones
         // Déplace le joueur à gauche dans les cadre de la fenêtre
         public void DirectionLeft()
         {
-            if(x - Config.PLAYER_SPEED <= 0 + (Config.PLAYER_WIDTH/2)+80)
+            if(_x - Config.PLAYER_SPEED <= 0 + (Config.PLAYER_WIDTH/2)+80)
             {
-                x -= 0;
+                _x -= 0;
             }
             else
             {
-                x -= Config.PLAYER_SPEED;
+                _x -= Config.PLAYER_SPEED;
             }
         }
 
@@ -42,13 +44,13 @@ namespace Drones
         public void DirectionRight()
         {
 
-            if (x + Config.PLAYER_SPEED >= Config.AIRSPACE_WIDTH - Config.PLAYER_WIDTH / 2)
+            if (_x + Config.PLAYER_SPEED >= Config.AIRSPACE_WIDTH - Config.PLAYER_WIDTH / 2)
             {
-                x -= 0;
+                _x -= 0;
             }
             else
             {
-                x += Config.PLAYER_SPEED;
+                _x += Config.PLAYER_SPEED;
             }
                 
         }
@@ -56,7 +58,7 @@ namespace Drones
         // De manière graphique
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawImage(Resources.drone, x - (Config.PLAYER_WIDTH/2), y - (Config.PLAYER_HEIGHT/2), Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
+            drawingSpace.Graphics.DrawImage(Resources.drone, _x - (Config.PLAYER_WIDTH/2), _y - (Config.PLAYER_HEIGHT/2), Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
         }
     }
 }

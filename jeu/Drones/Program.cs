@@ -20,10 +20,21 @@ namespace Drones
             List<Ennemi> enemy = new List<Ennemi>();
             for (int i = 0; i <2 ; i++)
             {
-                enemy.Add(new Ennemi(Ennemi.Race.NORMAL));                
-                enemy.Add(new Ennemi(Ennemi.Race.SPEEDY));
-                enemy.Add(new Ennemi(Ennemi.Race.ARMORED));
-                enemy.Add(new Ennemi(Ennemi.Race.TANK));
+                Ennemi normal = new Ennemi(Ennemi.Race.NORMAL);            
+                normal.Spawn(player, enemy);
+                enemy.Add(normal);
+
+                Ennemi speedy = new Ennemi(Ennemi.Race.SPEEDY);
+                speedy.Spawn(player, enemy);
+                enemy.Add(speedy);
+
+                Ennemi tank = new Ennemi(Ennemi.Race.TANK);
+                tank.Spawn(player, enemy);
+                enemy.Add(tank);
+
+                Ennemi armor = new Ennemi(Ennemi.Race.ARMORED);
+                armor.Spawn(player, enemy);
+                enemy.Add(armor);
             }
 
             // Démarrage

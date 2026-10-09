@@ -10,10 +10,13 @@ public class Config
 	public const int AIRSPACE_HEIGHT = 800;
 
 	public const int PLAYER_WIDTH = 80;
-    public const int PLAYER_HEIGHT = 80;
+	public const int PLAYER_HEIGHT = 80;
 
 	public const int PLAYER_SPEED = 5;
 
-	public const int ENNEMI_SPEED = 10;
+	public const int ENNEMI_SPEED = 6;
 
-}
+	public const int ZONE_MIN = 300;
+	public const int ZONE_MAX = 750;
+} 
+

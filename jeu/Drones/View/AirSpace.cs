@@ -58,7 +58,7 @@ namespace Drones
             _player.Update(interval);
             foreach (Ennemi ennemi in _enemy)
             {
-                ennemi.Update(interval);
+                ennemi.Update(interval, _enemy);
             }
         }
 

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Drones
@@ -16,6 +17,11 @@ namespace Drones
         public Race _race;
         private State _state;
 
+
+        public int Width => _race == Race.TANK ? 100 : 80;
+        public int Height => Width;
+        public Rectangle Hitbox => new Rectangle(_x - 40, _y - 40, Width, Height);
+
         //Définit les différentes races d'ennemis qu'il existe
         public enum Race { NORMAL, TANK, ARMORED, SPEEDY};
         //Définit les 2 modes de déplacement de l'ennemis
@@ -24,8 +30,6 @@ namespace Drones
         //Constructeur de la classe Ennemis
         public Ennemi( Race race)
         {
-            _x = RandomHelpers.Next(Config.AIRSPACE_WIDTH);
-            _y = RandomHelpers.Next(Config.AIRSPACE_HEIGHT);
             _race = race;
             _state = State.LEFT;
         }
@@ -43,21 +47,37 @@ namespace Drones
             }
         }
 
+        public void Spawn(Drone player, List<Ennemi> autres)
+        {
+            do
+            {
+                _x = RandomHelpers.Next(Config.AIRSPACE_WIDTH);
+                _y = RandomHelpers.Next(Config.ZONE_MIN,Config.ZONE_MAX);
+            } while (Hitbox.IntersectsWith(player.Hitbox) || autres.Any(e => Hitbox.IntersectsWith(e.Hitbox)));
+        }
+
         //Méthode Update qui permet de mettre à jours les infos de la positions de l'ennemis à chaque frames
-        public void Update(int interval)
+        public void Update(int interval, List<Ennemi> autres)
         {
             Deplacement();
-            if (_x - Config.ENNEMI_SPEED <= 0 +10)
+            if (_x - Config.ENNEMI_SPEED <= 0 + Width )
             {
                 _state = State.RIGHT;
             }
 
-            if (_x + Config.ENNEMI_SPEED >= Config.AIRSPACE_WIDTH -60)
+            if (_x + Config.ENNEMI_SPEED >= Config.AIRSPACE_WIDTH - 60 )
             {
                 _state = State.LEFT;
             }
 
-
+            if (autres.Any(e => e != this && Hitbox.IntersectsWith(e.Hitbox)))
+            {
+                if (_state == State.LEFT) _state = State.RIGHT;
+                else
+                {
+                    _state = State.LEFT;
+                }
+            }
         }
 
         // De manière graphique
@@ -65,19 +85,19 @@ namespace Drones
         {
             if (_race == Race.NORMAL)
             {
-                drawingSpace.Graphics.DrawImage(Resources.normal, _x - 40, _y - 40, 120, 120);
+                drawingSpace.Graphics.DrawImage(Resources.normal, _x - 40, _y - 40, Width, Height);
             }
             if (_race == Race.SPEEDY)
             {
-                drawingSpace.Graphics.DrawImage(Resources.speedy, _x - 40, _y - 40, 120, 120);
+                drawingSpace.Graphics.DrawImage(Resources.speedy, _x - 40, _y - 40, Width, Height);
             }
             if (_race == Race.TANK)
             {
-                drawingSpace.Graphics.DrawImage(Resources.bull, _x - 40, _y - 40, 180, 180);
+                drawingSpace.Graphics.DrawImage(Resources.bull, _x - 40, _y - 40, Width, Height);
             }
             if (_race == Race.ARMORED)
             {
-                drawingSpace.Graphics.DrawImage(Resources.black11, _x - 40, _y - 40, 120, 120);
+                drawingSpace.Graphics.DrawImage(Resources.black11, _x - 40, _y - 40, Width, Height);
             }
         }
     }

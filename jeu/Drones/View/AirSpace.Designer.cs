@@ -41,7 +41,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.fond;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1260, 523);
             Name = "AirSpace";
