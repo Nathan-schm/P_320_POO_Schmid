@@ -1,4 +1,4 @@
-namespace Drones
+namespace Squirrels
 {
     internal static class Program
     {
@@ -14,7 +14,7 @@ namespace Drones
             ApplicationConfiguration.Initialize();
 
             //Ajoute le joueur dans l'espace de jeu
-            Drone player = new Drone(Config.AIRSPACE_WIDTH/2, 70);
+            Squirrel player = new Squirrel(Config.TREESPACE_WIDTH/2, 70);
 
             //Déclare une nouvelle flotte d'ennemis
             List<Ennemi> enemy = new List<Ennemi>();
@@ -38,7 +38,7 @@ namespace Drones
             }
 
             // Démarrage
-            Application.Run(new AirSpace(player,enemy ));
+            Application.Run(new TreeSpace(player,enemy ));
         }
     }
 }

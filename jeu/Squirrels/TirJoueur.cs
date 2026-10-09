@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Drones
+namespace Squirrels
 {
     internal class TirJoueur
     {
@@ -16,7 +16,7 @@ namespace Drones
             _x = x;
             _y = y;
 
-            x = Drone.;
+           // x = Squirrel.;
         }
     }
 }

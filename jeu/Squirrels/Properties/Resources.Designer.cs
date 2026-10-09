@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Drones.Properties {
+namespace Squirrels.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Drones.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Drones.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Squirrels.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -103,9 +103,9 @@ namespace Drones.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap drone {
+        internal static System.Drawing.Bitmap squirrel {
             get {
-                object obj = ResourceManager.GetObject("drone", resourceCulture);
+                object obj = ResourceManager.GetObject("squirrel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

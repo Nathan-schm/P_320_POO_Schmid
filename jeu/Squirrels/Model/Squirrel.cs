@@ -1,11 +1,11 @@
-﻿using Drones.Helpers;
-using Drones.Properties;
+﻿using Squirrels.Helpers;
+using Squirrels.Properties;
 using System.Configuration;
 
-namespace Drones
+namespace Squirrels
 {
-    // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
-    public class Drone
+    // Cette partie de la classe Squirrel définit ce qu'est un squirrel par un modèle numérique
+    public class Squirrel
     {
         public int _x;                                 // Position en X depuis la gauche de l'espace aérien
         public int _y;                                 // Position en Y depuis le haut de l'espace aérien
@@ -13,7 +13,7 @@ namespace Drones
         public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2, _y - Config.PLAYER_HEIGHT/2, Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
 
         // Constructeur
-        public Drone(int x, int y)
+        public Squirrel(int x, int y)
         {
             this._x = x;
             this._y = y;
@@ -44,7 +44,7 @@ namespace Drones
         public void DirectionRight()
         {
 
-            if (_x + Config.PLAYER_SPEED >= Config.AIRSPACE_WIDTH - Config.PLAYER_WIDTH / 2)
+            if (_x + Config.PLAYER_SPEED >= Config.TREESPACE_WIDTH - Config.PLAYER_WIDTH / 2)
             {
                 _x -= 0;
             }
@@ -58,7 +58,7 @@ namespace Drones
         // De manière graphique
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawImage(Resources.drone, _x - (Config.PLAYER_WIDTH/2), _y - (Config.PLAYER_HEIGHT/2), Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
+            drawingSpace.Graphics.DrawImage(Resources.squirrel, _x - (Config.PLAYER_WIDTH/2), _y - (Config.PLAYER_HEIGHT/2), Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
         }
     }
 }

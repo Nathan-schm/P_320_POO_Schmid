@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Drones.Helpers
+namespace Squirrels.Helpers
 {
     internal static class RandomHelpers
     {

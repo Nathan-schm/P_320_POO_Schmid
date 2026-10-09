@@ -1,5 +1,5 @@
-﻿using Drones.Helpers;
-using Drones.Properties;
+﻿using Squirrels.Helpers;
+using Squirrels.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
 
-namespace Drones
+namespace Squirrels
 {
     //Cette partie de la classe Ennemis définit ce qu'est un ennemis
     public class Ennemi
@@ -47,11 +47,11 @@ namespace Drones
             }
         }
 
-        public void Spawn(Drone player, List<Ennemi> autres)
+        public void Spawn(Squirrel player, List<Ennemi> autres)
         {
             do
             {
-                _x = RandomHelpers.Next(Config.AIRSPACE_WIDTH);
+                _x = RandomHelpers.Next(Config.TREESPACE_WIDTH);
                 _y = RandomHelpers.Next(Config.ZONE_MIN,Config.ZONE_MAX);
             } while (Hitbox.IntersectsWith(player.Hitbox) || autres.Any(e => Hitbox.IntersectsWith(e.Hitbox)));
         }
@@ -65,7 +65,7 @@ namespace Drones
                 _state = State.RIGHT;
             }
 
-            if (_x + Config.ENNEMI_SPEED >= Config.AIRSPACE_WIDTH - 60 )
+            if (_x + Config.ENNEMI_SPEED >= Config.TREESPACE_WIDTH - 60 )
             {
                 _state = State.LEFT;
             }

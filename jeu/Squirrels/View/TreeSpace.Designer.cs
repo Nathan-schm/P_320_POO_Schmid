@@ -1,6 +1,6 @@
-﻿namespace Drones
+﻿namespace Squirrels
 {
-    partial class AirSpace
+    partial class TreeSpace
     {
         /// <summary>
         ///  Required designer variable.
@@ -37,16 +37,16 @@
             ticker.Enabled = true;
             ticker.Tick += NewFrame;
             // 
-            // AirSpace
+            // TreeSpace
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1260, 523);
-            Name = "AirSpace";
+            Name = "TreeSpace";
             RightToLeft = RightToLeft.Yes;
-            Text = "AirSpace";
-            KeyDown += AirSpace_KeyDown;
+            Text = "TreeSpace";
+            KeyDown += TreeSpace_KeyDown;
             ResumeLayout(false);
 
         }
