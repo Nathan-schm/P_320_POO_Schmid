@@ -366,6 +366,26 @@
       "description": "Ajout de la classe des Tirs du joueurs",
       "duration": 45,
       "status": "WIP"
+    },
+    {
+      "id": "923ecb68-ee3f-49f8-bf0f-cbdc9f5aa85e",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-09T14:29:00.000Z",
+      "name": "Nommage",
+      "description": "Changement des noms des fichiers de mon projet",
+      "duration": 30,
+      "status": "DONE"
+    },
+    {
+      "id": "941f253b-12a6-4ce5-8caf-9219ed5f6094",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-09T14:30:00.000Z",
+      "name": "US 03",
+      "description": "Création des tirs du joueur, le joueur fait tomber des noisettes en appuyant sur espace",
+      "duration": 55,
+      "status": "DONE"
     }
   ]
 }
