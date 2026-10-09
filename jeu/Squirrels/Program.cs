@@ -16,6 +16,8 @@ namespace Squirrels
             //Ajoute le joueur dans l'espace de jeu
             Squirrel player = new Squirrel(Config.TREESPACE_WIDTH/2, 70);
 
+            List<TirJoueur> tirjoueur = new List<TirJoueur>();
+
             //Déclare une nouvelle flotte d'ennemis
             List<Ennemi> enemy = new List<Ennemi>();
             for (int i = 0; i <2 ; i++)
@@ -38,7 +40,7 @@ namespace Squirrels
             }
 
             // Démarrage
-            Application.Run(new TreeSpace(player,enemy ));
+            Application.Run(new TreeSpace(player,enemy,tirjoueur));
         }
     }
 }

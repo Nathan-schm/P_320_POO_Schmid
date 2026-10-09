@@ -102,7 +102,7 @@ namespace Squirrels
                 case Keys.Right:
                     _player.DirectionRight();
                     break;
-                case Keys.L:
+                case Keys.Space:
                     _tirjoueur.Add(_player.Throw());
                     break;
             }

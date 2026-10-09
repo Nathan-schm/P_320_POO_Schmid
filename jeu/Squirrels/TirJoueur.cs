@@ -20,12 +20,12 @@ namespace Squirrels
 
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawImage(Resources.noisette, _x -10, _y -10, 20, 20);
+            drawingSpace.Graphics.DrawImage(Resources.noisette, _x -10, _y -10, 50, 50);
         }
 
         public void Update(int interval)
         {
-            _y++;
+            _y+=20;
         }
     }
 }
