@@ -55,6 +55,11 @@ namespace Squirrels
                 
         }
 
+        public TirJoueur Throw()
+        {
+            return new TirJoueur(_x, _y);
+        }
+
         // De manière graphique
         public void Render(BufferedGraphics drawingSpace)
         {

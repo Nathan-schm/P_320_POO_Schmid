@@ -103,9 +103,9 @@ namespace Squirrels.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap squirrel {
+        internal static System.Drawing.Bitmap fond {
             get {
-                object obj = ResourceManager.GetObject("squirrel", resourceCulture);
+                object obj = ResourceManager.GetObject("fond", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Squirrels.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fond {
+        internal static System.Drawing.Bitmap noisette {
             get {
-                object obj = ResourceManager.GetObject("fond", resourceCulture);
+                object obj = ResourceManager.GetObject("noisette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +136,26 @@ namespace Squirrels.Properties {
         internal static System.Drawing.Bitmap speedy {
             get {
                 object obj = ResourceManager.GetObject("speedy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap squirrel {
+            get {
+                object obj = ResourceManager.GetObject("squirrel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tirsennemi {
+            get {
+                object obj = ResourceManager.GetObject("tirsennemi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

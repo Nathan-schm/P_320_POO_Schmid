@@ -124,8 +124,11 @@
   <data name="branche" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\branche1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\black11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bull.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fond.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,13 +136,16 @@
   <data name="branche1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\branche1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bull" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bull.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="speedy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speedy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fond" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fond.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="noisette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noisette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tirsennemi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tirsennemi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

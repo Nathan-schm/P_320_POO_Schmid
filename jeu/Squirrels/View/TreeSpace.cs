@@ -15,11 +15,14 @@ namespace Squirrels
         // L'ennemis
         private List<Ennemi> _enemy;
 
+        // Le tir
+        private List<TirJoueur> _tirjoueur;
+
         BufferedGraphicsContext currentContext;
         BufferedGraphics treespace;
 
         // Initialisation de l'espace arboré avec un certain nombre de squirrels
-        public TreeSpace(Squirrel player, List<Ennemi> enemy)
+        public TreeSpace(Squirrel player, List<Ennemi> enemy, List<TirJoueur> tirjoueur)
         {
             InitializeComponent();
             ClientSize = new Size(Config.TREESPACE_WIDTH, Config.TREESPACE_HEIGHT);
@@ -31,6 +34,7 @@ namespace Squirrels
             treespace = currentContext.Allocate(this.CreateGraphics(), this.DisplayRectangle);
             this._player = player;
             this._enemy = enemy;
+            this._tirjoueur = tirjoueur;
         }
 
         // Affichage de la situation actuelle
@@ -39,7 +43,7 @@ namespace Squirrels
             treespace.Graphics.Clear(Color.White);
             treespace.Graphics.DrawImage(Resources.fond, 0, 0, Config.TREESPACE_WIDTH, Config.TREESPACE_HEIGHT);
             treespace.Graphics.DrawImage(Resources.branche1, 0, 0, Config.TREESPACE_WIDTH, 143);
-            
+
 
             _player.Render(treespace);
 
@@ -48,6 +52,10 @@ namespace Squirrels
                 ennemi.Render(treespace);
             }
 
+            foreach (TirJoueur tirjoueur in _tirjoueur)
+            {
+                tirjoueur.Render(treespace);
+            }
 
             treespace.Render();
         }
@@ -59,6 +67,10 @@ namespace Squirrels
             foreach (Ennemi ennemi in _enemy)
             {
                 ennemi.Update(interval, _enemy);
+            }
+            foreach (TirJoueur tirjoueur in _tirjoueur)
+            {
+                tirjoueur.Update(interval);
             }
         }
 
@@ -78,23 +90,20 @@ namespace Squirrels
                 case Keys.A:
                     _player.DirectionLeft();
                     break;
-            }
-            switch (e.KeyCode)
-            {
+
                 case Keys.D:
                     _player.DirectionRight();
                     break;
-            }
-            switch (e.KeyCode)
-            {
+
                 case Keys.Left:
                     _player.DirectionLeft();
                     break;
-            }
-            switch (e.KeyCode)
-            {
+
                 case Keys.Right:
                     _player.DirectionRight();
+                    break;
+                case Keys.L:
+                    _tirjoueur.Add(_player.Throw());
                     break;
             }
         }
