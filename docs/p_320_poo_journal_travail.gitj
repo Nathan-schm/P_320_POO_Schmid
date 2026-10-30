@@ -416,6 +416,36 @@
       "description": "Ajout du score et de la vie ",
       "duration": 30,
       "status": "DONE"
+    },
+    {
+      "id": "224694dd-01ee-40cd-ad06-7bd8c70bb3d9",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-30T15:32:00.000Z",
+      "name": "Score",
+      "description": "affichage du score ",
+      "duration": 60,
+      "status": "DONE"
+    },
+    {
+      "id": "894f4115-f250-43c0-8205-61ae0f254854",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-30T15:33:00.000Z",
+      "name": "Victoire",
+      "description": "gestion de la victoire ",
+      "duration": 30,
+      "status": "DONE"
+    },
+    {
+      "id": "68d2ffd5-4a60-48df-8c84-330685f236b2",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-30T15:33:00.000Z",
+      "name": "défaite",
+      "description": "gestion de la défaite",
+      "duration": 30,
+      "status": "DONE"
     }
   ]
 }
