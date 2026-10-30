@@ -14,6 +14,7 @@ namespace Squirrels
     {
         public int _x;
         public int _y;
+        public int _pointDeVie;
         public Race _race;
         private State _state;
 
@@ -28,9 +29,10 @@ namespace Squirrels
         enum State { LEFT, RIGHT }; 
 
         //Constructeur de la classe Ennemis
-        public Ennemi( Race race)
+        public Ennemi( Race race, int pointDeVie)
         {
             _race = race;
+            _pointDeVie = pointDeVie;
             _state = State.LEFT;
         }
 

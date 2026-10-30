@@ -1,4 +1,6 @@
 using Squirrels.Properties;
+using System.Numerics;
+using System.Windows.Forms;
 
 namespace Squirrels
 {
@@ -71,6 +73,20 @@ namespace Squirrels
             foreach (TirJoueur tirjoueur in _tirjoueur)
             {
                 tirjoueur.Update(interval);
+            }
+            for (int i = _tirjoueur.Count - 1; i >= 0; i--)
+            {
+                Ennemi touche = _enemy.FirstOrDefault(e => e.Hitbox.IntersectsWith(_tirjoueur[i].Hitbox));
+
+                if (touche != null)
+                {
+                    _tirjoueur.RemoveAt(i);
+                    touche._pointDeVie -= 20;
+                    if (touche._pointDeVie <= 0)
+                    {
+                        _enemy.Remove(touche);
+                    }
+                }
             }
         }
 

@@ -22,19 +22,19 @@ namespace Squirrels
             List<Ennemi> enemy = new List<Ennemi>();
             for (int i = 0; i <2 ; i++)
             {
-                Ennemi normal = new Ennemi(Ennemi.Race.NORMAL);            
+                Ennemi normal = new Ennemi(Ennemi.Race.NORMAL, 50);            
                 normal.Spawn(player, enemy);
                 enemy.Add(normal);
 
-                Ennemi speedy = new Ennemi(Ennemi.Race.SPEEDY);
+                Ennemi speedy = new Ennemi(Ennemi.Race.SPEEDY, 50);
                 speedy.Spawn(player, enemy);
                 enemy.Add(speedy);
 
-                Ennemi tank = new Ennemi(Ennemi.Race.TANK);
+                Ennemi tank = new Ennemi(Ennemi.Race.TANK, 80);
                 tank.Spawn(player, enemy);
                 enemy.Add(tank);
 
-                Ennemi armor = new Ennemi(Ennemi.Race.ARMORED);
+                Ennemi armor = new Ennemi(Ennemi.Race.ARMORED, 50);
                 armor.Spawn(player, enemy);
                 enemy.Add(armor);
             }

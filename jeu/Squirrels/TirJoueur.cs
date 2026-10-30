@@ -12,6 +12,8 @@ namespace Squirrels
         private int _x;
         private int _y;
 
+        public Rectangle Hitbox => new Rectangle(_x - 10, _y - 10, 50, 50);
+
         public TirJoueur(int x, int y)
         {
             _x = x;
