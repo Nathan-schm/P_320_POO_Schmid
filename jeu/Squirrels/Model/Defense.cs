@@ -5,29 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Squirrels
+namespace Squirrels.Model
 {
-    public class TirJoueur
+    public class Defense
     {
         private int _x;
         private int _y;
+        public int _pV;
 
-        public Rectangle Hitbox => new Rectangle(_x , _y , 30, 30);
+        public Rectangle Hitbox => new Rectangle(_x + 25 , _y +105, 100, 55);
 
-        public TirJoueur(int x, int y)
+        public Defense(int x, int y, int pV)
         {
             _x = x;
             _y = y;
+            _pV = pV;
         }
 
         public void Render(BufferedGraphics drawingSpace)
         {
-            drawingSpace.Graphics.DrawImage(Resources.noisette, _x -10, _y -10, 50, 50);
-        }
-
-        public void Update(int interval)
-        {
-            _y+=10;
+            drawingSpace.Graphics.DrawImage(Resources.feuille, _x, _y +90, 150, 95);
         }
     }
 }

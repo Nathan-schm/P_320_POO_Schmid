@@ -1,6 +1,6 @@
 using Squirrels.Helpers;
 
-namespace Squirrels
+namespace Squirrels.Model
 {
     internal static class Program
     {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
 
-namespace Squirrels
+namespace Squirrels.Model
 {
     //Cette partie de la classe Ennemis définit ce qu'est un ennemis
     public class Ennemi

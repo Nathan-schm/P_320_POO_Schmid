@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Squirrels
+namespace Squirrels.Model
 {
     public class TirEnnemi
     {

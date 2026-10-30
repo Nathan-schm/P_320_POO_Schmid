@@ -1,4 +1,5 @@
 using Squirrels.Helpers;
+using Squirrels.Model;
 using Squirrels.Properties;
 using System.Numerics;
 using System.Windows.Forms;
