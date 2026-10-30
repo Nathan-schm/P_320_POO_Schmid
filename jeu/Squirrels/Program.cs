@@ -4,37 +4,43 @@ namespace Squirrels
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+            bool rejouer;
+            do
+            {
+                TreeSpace jeu = CreerPartie();
+                Application.Run(jeu);
+                rejouer = jeu.Rejouer;
+            } while (rejouer);
+        }
+
+        // Crée une partie 
+        static TreeSpace CreerPartie()
+        {
             //Ajoute le joueur dans l'espace de jeu
-            Squirrel player = new Squirrel(Config.TREESPACE_WIDTH/2, 70, 300);
+            Squirrel player = new Squirrel(Config.TREESPACE_WIDTH / 2, 70, 300);
 
             List<TirJoueur> tirjoueur = new List<TirJoueur>();
-            
+
             List<TirEnnemi> tirennemi = new List<TirEnnemi>();
 
             List<Defense> defense = new List<Defense>();
-            for(int e =0; e <5; e++)
+            for (int e = 0; e < 5; e++)
             {
-                int centre = Config.TREESPACE_WIDTH/6 * (e + 1);
+                int centre = Config.TREESPACE_WIDTH / 6 * (e + 1);
                 Defense feuille = new Defense(centre - 40, 0, 80);
-                defense.Add(feuille);  
+                defense.Add(feuille);
             }
 
             //Déclare une nouvelle flotte d'ennemis
             List<Ennemi> enemy = new List<Ennemi>();
-            for (int i = 0; i <2 ; i++)
+            for (int i = 0; i < 2; i++)
             {
-                Ennemi normal = new Ennemi(Ennemi.Race.NORMAL, 100);            
+                Ennemi normal = new Ennemi(Ennemi.Race.NORMAL, 100);
                 normal.Spawn(player, enemy);
                 enemy.Add(normal);
 
@@ -51,8 +57,7 @@ namespace Squirrels
                 enemy.Add(armor);
             }
 
-            // Démarrage
-            Application.Run(new TreeSpace(player,enemy,tirjoueur,tirennemi, defense));
+            return new TreeSpace(player, enemy, tirjoueur, tirennemi, defense);
         }
     }
 }

@@ -2,6 +2,7 @@ using Squirrels.Helpers;
 using Squirrels.Properties;
 using System.Numerics;
 using System.Windows.Forms;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace Squirrels
 {
@@ -29,6 +30,9 @@ namespace Squirrels
         private List<TirJoueur> _tirjoueur;
 
         private List<TirEnnemi> _tirennemi;
+
+        public bool Rejouer { get;private set; }
+        private bool _fini;
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics treespace;
@@ -125,6 +129,11 @@ namespace Squirrels
                     {
                         _enemy.Remove(touche);
                         _score += 50;
+                        if (_enemy.Count == 0)
+                        {
+                            FinPartie($"Victoire !         Score : {_score}");
+                            return;
+                        }
                     }
                 }
             }
@@ -151,8 +160,7 @@ namespace Squirrels
 
                     if (_player._vie <= 0)
                     {
-                        ticker.Stop();
-                        MessageBox.Show("Perdu !");
+                        FinPartie($"Perdu !        Score : {_score}");
                         return;
                     }
                 }
@@ -167,13 +175,25 @@ namespace Squirrels
             }
         }
 
+        private void FinPartie(string message)
+        {
+            ticker.Stop();
+
+            FinDePartie fin = new FinDePartie(message, _score);
+            DialogResult reponse = fin.ShowDialog(this);
+            Rejouer = (reponse == DialogResult.Retry);
+            fin.Dispose();
+
+            _fini = true;
+            Close();
+        }
+
         // Méthode appelée à chaque frame
         private void NewFrame(object sender, EventArgs e)
         {
             this.Update(ticker.Interval = 15);
-            this.Render();
+            if (!_fini) this.Render();
         }
-
 
         // Regarde quelles touches sont appuyée pour et envoie a la méthode en lien
         private void TreeSpace_KeyDown(object sender, KeyEventArgs e)

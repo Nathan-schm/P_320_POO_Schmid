@@ -63,6 +63,16 @@ namespace Squirrels.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5371c6a1_cb13_4fc0_9e8d_cbfda4090dcf {
+            get {
+                object obj = ResourceManager.GetObject("5371c6a1-cb13-4fc0-9e8d-cbfda4090dcf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black11 {
             get {
                 object obj = ResourceManager.GetObject("black11", resourceCulture);
@@ -116,6 +126,16 @@ namespace Squirrels.Properties {
         internal static System.Drawing.Bitmap fond {
             get {
                 object obj = ResourceManager.GetObject("fond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hehehehehfond {
+            get {
+                object obj = ResourceManager.GetObject("hehehehehfond", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
