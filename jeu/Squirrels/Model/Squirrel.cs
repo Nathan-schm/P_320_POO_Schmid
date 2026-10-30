@@ -10,6 +10,7 @@ namespace Squirrels
         public int _x;                                 // Position en X depuis la gauche de l'espace aérien
         public int _y;                                 // Position en Y depuis le haut de l'espace aérien
         public int _vie;
+        private int _recharge;
 
         public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2, _y - Config.PLAYER_HEIGHT/2, Config.PLAYER_WIDTH -10, Config.PLAYER_HEIGHT-10);
 
@@ -23,10 +24,19 @@ namespace Squirrels
             DirectionRight();
         }
 
-        // Cette méthode calcule le nouvel état dans lequel le joueur se trouve pour chaque frame
+        // Cette méthode calcule le nouvel état dans lequel le joueur se trouve pour chaque frame       
+
         public void Update(int interval)
         {
-            
+            if (_recharge > 0) _recharge -= interval;
+        }
+
+        public bool PeutLancer()
+        {
+            if (_recharge > 0) return false;
+
+            _recharge = Config.PLAYER_DELAI_TIR;
+            return true;
         }
 
         // Déplace le joueur à gauche dans les cadre de la fenêtre

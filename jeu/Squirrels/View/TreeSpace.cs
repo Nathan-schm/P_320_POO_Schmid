@@ -162,7 +162,10 @@ namespace Squirrels
                     break;
 
                 case Keys.Space:
-                    _tirjoueur.Add(_player.Throw());
+                    if (_player.PeutLancer())
+                    {
+                        _tirjoueur.Add(_player.Throw());
+                    }
                     break;
             }
         }
