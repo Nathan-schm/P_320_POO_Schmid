@@ -1,3 +1,4 @@
+using Squirrels.Helpers;
 using Squirrels.Properties;
 using System.Numerics;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace Squirrels
 
         private bool _gauche;
         private bool _droite;
+
+        private int _score;
 
         // Le joueur 
         private Squirrel _player;
@@ -52,6 +55,9 @@ namespace Squirrels
             treespace.Graphics.Clear(Color.White);
             treespace.Graphics.DrawImage(Resources.fond, 0, 0, Config.TREESPACE_WIDTH, Config.TREESPACE_HEIGHT);
             treespace.Graphics.DrawImage(Resources.branche1, 0, 0, Config.TREESPACE_WIDTH, 143);
+
+            treespace.Graphics.DrawString($"Vie : {_player._vie}", TextHelpers.drawFont, TextHelpers.writingBrush, 10, 10);
+            treespace.Graphics.DrawString($"Score : {_score}", TextHelpers.drawFont, TextHelpers.writingBrush, 10, 30);
 
 
             _player.Render(treespace);
@@ -110,6 +116,7 @@ namespace Squirrels
                     if (touche._pointDeVie <= 0)
                     {
                         _enemy.Remove(touche);
+                        _score += 50;
                     }
                 }
             }
