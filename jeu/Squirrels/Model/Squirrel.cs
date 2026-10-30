@@ -12,7 +12,7 @@ namespace Squirrels
         public int _vie;
         private int _recharge;
 
-        public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2, _y - Config.PLAYER_HEIGHT/2, Config.PLAYER_WIDTH -10, Config.PLAYER_HEIGHT-10);
+        public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2 +5, _y - Config.PLAYER_HEIGHT/2 +5, Config.PLAYER_WIDTH -10, Config.PLAYER_HEIGHT-10);
 
         // Constructeur
         public Squirrel(int x, int y, int vie)

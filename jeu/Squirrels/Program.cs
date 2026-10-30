@@ -1,3 +1,5 @@
+using Squirrels.Helpers;
+
 namespace Squirrels
 {
     internal static class Program
@@ -19,6 +21,14 @@ namespace Squirrels
             List<TirJoueur> tirjoueur = new List<TirJoueur>();
             
             List<TirEnnemi> tirennemi = new List<TirEnnemi>();
+
+            List<Defense> defense = new List<Defense>();
+            for(int e =0; e <5; e++)
+            {
+                int centre = Config.TREESPACE_WIDTH/6 * (e + 1);
+                Defense feuille = new Defense(centre - 40, 0, 80);
+                defense.Add(feuille);  
+            }
 
             //Déclare une nouvelle flotte d'ennemis
             List<Ennemi> enemy = new List<Ennemi>();
@@ -42,7 +52,7 @@ namespace Squirrels
             }
 
             // Démarrage
-            Application.Run(new TreeSpace(player,enemy,tirjoueur,tirennemi));
+            Application.Run(new TreeSpace(player,enemy,tirjoueur,tirennemi, defense));
         }
     }
 }

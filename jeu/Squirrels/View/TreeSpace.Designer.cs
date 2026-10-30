@@ -41,7 +41,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.TirSpeedy;
+            BackgroundImage = Properties.Resources.feuille;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1260, 523);
             DoubleBuffered = true;

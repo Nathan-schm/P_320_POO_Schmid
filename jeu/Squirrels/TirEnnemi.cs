@@ -14,7 +14,7 @@ namespace Squirrels
         private Ennemi.Race _race;
         public int Degats => _race == Ennemi.Race.SPEEDY ? 50 : 25;
 
-        public Rectangle Hitbox => new Rectangle(_x - 10, _y - 10, 50, 100);
+        public Rectangle Hitbox => new Rectangle(_x +2, _y , 15, 75);
 
         public TirEnnemi(int x, int y, Ennemi.Race race)
         {

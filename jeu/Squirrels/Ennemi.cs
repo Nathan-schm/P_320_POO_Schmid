@@ -23,7 +23,7 @@ namespace Squirrels
 
         public int Width => _race == Race.TANK ? 100 : 80;
         public int Height => Width;
-        public Rectangle Hitbox => new Rectangle(_x - 40, _y - 40, Width -25, Height-20);
+        public Rectangle Hitbox => new Rectangle(_x - 40 +10, _y - 40 +10, Width -20, Height-20);
 
         //Définit les différentes races d'ennemis qu'il existe
         public enum Race { NORMAL, TANK, ARMORED, SPEEDY};

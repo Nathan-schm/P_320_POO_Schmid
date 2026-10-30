@@ -20,6 +20,8 @@ namespace Squirrels
         // Le joueur 
         private Squirrel _player;
 
+        private List<Defense> _defense;
+
         // L'ennemis
         private List<Ennemi> _enemy;
 
@@ -32,7 +34,7 @@ namespace Squirrels
         BufferedGraphics treespace;
 
         // Initialisation de l'espace arboré avec un certain nombre de squirrels
-        public TreeSpace(Squirrel player, List<Ennemi> enemy, List<TirJoueur> tirjoueur, List<TirEnnemi> tirennemi)
+        public TreeSpace(Squirrel player, List<Ennemi> enemy, List<TirJoueur> tirjoueur, List<TirEnnemi> tirennemi, List<Defense> defense)
         {
             InitializeComponent();
             this.KeyUp += TreeSpace_KeyUp;
@@ -47,6 +49,7 @@ namespace Squirrels
             this._enemy = enemy;
             this._tirjoueur = tirjoueur;
             this._tirennemi = tirennemi;
+            this._defense = defense;
         }
 
         // Affichage de la situation actuelle
@@ -75,6 +78,11 @@ namespace Squirrels
             foreach (TirEnnemi tirennemi in _tirennemi)
             {
                 tirennemi.Render(treespace);
+            }
+
+            foreach(Defense defense in _defense)
+            {
+                defense.Render(treespace);
             }
 
             treespace.Render();
@@ -123,6 +131,19 @@ namespace Squirrels
 
             for (int a = _tirennemi.Count - 1; a >= 0; a--)
             {
+                Defense contact = _defense.FirstOrDefault(y => y.Hitbox.IntersectsWith(_tirennemi[a].Hitbox));
+
+                if (contact != null)
+                {
+                    _tirennemi.RemoveAt(a);
+                    contact._pV -= 20;
+                    if (contact._pV <= 0)
+                    {
+                        _defense.Remove(contact);
+                    }
+                    continue;
+                }
+
                 if (_tirennemi[a].Hitbox.IntersectsWith(_player.Hitbox))
                 {
                     _player._vie -= _tirennemi[a].Degats;
@@ -135,6 +156,7 @@ namespace Squirrels
                         return;
                     }
                 }
+
             }
             for (int b = _tirennemi.Count - 1; b >= 0; b--)
             {
