@@ -11,6 +11,9 @@ namespace Squirrels
     public partial class TreeSpace : Form
     {
 
+        private bool _gauche;
+        private bool _droite;
+
         // Le joueur 
         private Squirrel _player;
 
@@ -20,13 +23,16 @@ namespace Squirrels
         // Le tir
         private List<TirJoueur> _tirjoueur;
 
+        private List<TirEnnemi> _tirennemi;
+
         BufferedGraphicsContext currentContext;
         BufferedGraphics treespace;
 
         // Initialisation de l'espace arboré avec un certain nombre de squirrels
-        public TreeSpace(Squirrel player, List<Ennemi> enemy, List<TirJoueur> tirjoueur)
+        public TreeSpace(Squirrel player, List<Ennemi> enemy, List<TirJoueur> tirjoueur, List<TirEnnemi> tirennemi)
         {
             InitializeComponent();
+            this.KeyUp += TreeSpace_KeyUp;
             ClientSize = new Size(Config.TREESPACE_WIDTH, Config.TREESPACE_HEIGHT);
 
             // Gets a reference to the current BufferedGraphicsContext
@@ -37,6 +43,7 @@ namespace Squirrels
             this._player = player;
             this._enemy = enemy;
             this._tirjoueur = tirjoueur;
+            this._tirennemi = tirennemi;
         }
 
         // Affichage de la situation actuelle
@@ -59,6 +66,11 @@ namespace Squirrels
                 tirjoueur.Render(treespace);
             }
 
+            foreach (TirEnnemi tirennemi in _tirennemi)
+            {
+                tirennemi.Render(treespace);
+            }
+
             treespace.Render();
         }
 
@@ -66,14 +78,27 @@ namespace Squirrels
         private void Update(int interval)
         {
             _player.Update(interval);
+            if (_gauche) _player.DirectionLeft();
+            if (_droite) _player.DirectionRight();
             foreach (Ennemi ennemi in _enemy)
             {
                 ennemi.Update(interval, _enemy);
+
+                if (ennemi.PeutTirer(interval))
+                {
+                    _tirennemi.Add(ennemi.Throw());
+                }
             }
             foreach (TirJoueur tirjoueur in _tirjoueur)
             {
                 tirjoueur.Update(interval);
             }
+
+            foreach (TirEnnemi tirennemi in _tirennemi)
+            {
+                tirennemi.Update(interval);
+            }
+
             for (int i = _tirjoueur.Count - 1; i >= 0; i--)
             {
                 Ennemi touche = _enemy.FirstOrDefault(e => e.Hitbox.IntersectsWith(_tirjoueur[i].Hitbox));
@@ -81,11 +106,34 @@ namespace Squirrels
                 if (touche != null)
                 {
                     _tirjoueur.RemoveAt(i);
-                    touche._pointDeVie -= 20;
+                    touche._pointDeVie -= 25;
                     if (touche._pointDeVie <= 0)
                     {
                         _enemy.Remove(touche);
                     }
+                }
+            }
+
+            for (int a = _tirennemi.Count - 1; a >= 0; a--)
+            {
+                if (_tirennemi[a].Hitbox.IntersectsWith(_player.Hitbox))
+                {
+                    _player._vie -= _tirennemi[a].Degats;
+                    _tirennemi.RemoveAt(a);                    
+
+                    if (_player._vie <= 0)
+                    {
+                        ticker.Stop();
+                        MessageBox.Show("Perdu !");
+                        return;
+                    }
+                }
+            }
+            for (int b = _tirennemi.Count - 1; b >= 0; b--)
+            {
+                if (_tirennemi[b].Hitbox.Bottom < 0)
+                {
+                    _tirennemi.RemoveAt(b);
                 }
             }
         }
@@ -93,7 +141,7 @@ namespace Squirrels
         // Méthode appelée à chaque frame
         private void NewFrame(object sender, EventArgs e)
         {
-            this.Update(ticker.Interval);
+            this.Update(ticker.Interval = 15);
             this.Render();
         }
 
@@ -104,22 +152,33 @@ namespace Squirrels
             switch (e.KeyCode)
             {
                 case Keys.A:
-                    _player.DirectionLeft();
+                case Keys.Left:
+                    _gauche = true;
                     break;
 
                 case Keys.D:
-                    _player.DirectionRight();
-                    break;
-
-                case Keys.Left:
-                    _player.DirectionLeft();
-                    break;
-
                 case Keys.Right:
-                    _player.DirectionRight();
+                    _droite = true;
                     break;
+
                 case Keys.Space:
                     _tirjoueur.Add(_player.Throw());
+                    break;
+            }
+        }
+
+        private void TreeSpace_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.A:
+                case Keys.Left:
+                    _gauche = false;
+                    break;
+
+                case Keys.D:
+                case Keys.Right:
+                    _droite = false;
                     break;
             }
         }

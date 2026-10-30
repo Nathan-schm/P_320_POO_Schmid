@@ -27,7 +27,7 @@ namespace Squirrels
 
         public void Update(int interval)
         {
-            _y+=20;
+            _y+=10;
         }
     }
 }

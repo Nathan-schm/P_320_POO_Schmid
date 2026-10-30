@@ -17,11 +17,13 @@ namespace Squirrels
         public int _pointDeVie;
         public Race _race;
         private State _state;
+        private int _chrono;
+        private int _delaiTir = 2000;
 
 
         public int Width => _race == Race.TANK ? 100 : 80;
         public int Height => Width;
-        public Rectangle Hitbox => new Rectangle(_x - 40, _y - 40, Width, Height);
+        public Rectangle Hitbox => new Rectangle(_x - 40, _y - 40, Width -25, Height-20);
 
         //Définit les différentes races d'ennemis qu'il existe
         public enum Race { NORMAL, TANK, ARMORED, SPEEDY};
@@ -34,6 +36,7 @@ namespace Squirrels
             _race = race;
             _pointDeVie = pointDeVie;
             _state = State.LEFT;
+            _chrono = RandomHelpers.Next(_delaiTir);
         }
 
         //Méthode qui permet de lancer les déplacement par rapport au mode de déplacement de l'ennemis
@@ -80,6 +83,21 @@ namespace Squirrels
                     _state = State.LEFT;
                 }
             }
+        }
+        public TirEnnemi Throw()
+        {
+            return new TirEnnemi(_x, _y, _race);
+        }
+
+        public bool PeutTirer(int interval)
+        {
+            _chrono += interval;
+            if (_chrono >= _delaiTir)
+            {
+                _chrono = 0;
+                return true;
+            }
+            return false;
         }
 
         // De manière graphique

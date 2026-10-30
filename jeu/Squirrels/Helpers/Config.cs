@@ -14,7 +14,7 @@ public class Config
 
 	public const int PLAYER_SPEED = 5;
 
-	public const int ENNEMI_SPEED = 6;
+	public const int ENNEMI_SPEED = 2;
 
 	public const int ZONE_MIN = 300;
 	public const int ZONE_MAX = 750;

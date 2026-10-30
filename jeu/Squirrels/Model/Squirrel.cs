@@ -9,14 +9,16 @@ namespace Squirrels
     {
         public int _x;                                 // Position en X depuis la gauche de l'espace aérien
         public int _y;                                 // Position en Y depuis le haut de l'espace aérien
+        public int _vie;
 
-        public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2, _y - Config.PLAYER_HEIGHT/2, Config.PLAYER_WIDTH, Config.PLAYER_HEIGHT);
+        public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2, _y - Config.PLAYER_HEIGHT/2, Config.PLAYER_WIDTH -10, Config.PLAYER_HEIGHT-10);
 
         // Constructeur
-        public Squirrel(int x, int y)
+        public Squirrel(int x, int y, int vie)
         {
             this._x = x;
             this._y = y;
+            _vie = vie;
             DirectionLeft();
             DirectionRight();
         }

@@ -41,9 +41,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.tirsennemi;
+            BackgroundImage = Properties.Resources.TirSpeedy;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1260, 523);
+            DoubleBuffered = true;
             Name = "TreeSpace";
             RightToLeft = RightToLeft.Yes;
             Text = "TreeSpace";
