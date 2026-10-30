@@ -386,6 +386,36 @@
       "description": "Création des tirs du joueur, le joueur fait tomber des noisettes en appuyant sur espace",
       "duration": 55,
       "status": "DONE"
+    },
+    {
+      "id": "2b5c5e44-e4d7-4529-8bb0-54dbf5c36b71",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-30T09:15:00.000Z",
+      "name": "Ennemis",
+      "description": "Ajout des tirs ennemis",
+      "duration": 60,
+      "status": "DONE"
+    },
+    {
+      "id": "cba59c15-cdcc-4127-a934-1bdb3193aa72",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-30T10:15:00.000Z",
+      "name": "Ennemis / Joueur",
+      "description": "Ajout des dégats des tirs contre le joueur, et à l'inverse pour le joueur",
+      "duration": 60,
+      "status": "DONE"
+    },
+    {
+      "id": "11a868c8-85dc-4463-8bf6-bf2c11dfc545",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-30T10:37:00.000Z",
+      "name": "Score",
+      "description": "Ajout du score et de la vie ",
+      "duration": 30,
+      "status": "DONE"
     }
   ]
 }
