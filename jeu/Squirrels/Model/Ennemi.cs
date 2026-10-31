@@ -54,11 +54,24 @@ namespace Squirrels.Model
 
         public void Spawn(Squirrel player, List<Ennemi> autres)
         {
+            bool touche;
             do
             {
                 _x = RandomHelpers.Next(Config.TREESPACE_WIDTH);
-                _y = RandomHelpers.Next(Config.ZONE_MIN,Config.ZONE_MAX);
-            } while (Hitbox.IntersectsWith(player.Hitbox) || autres.Any(e => Hitbox.IntersectsWith(e.Hitbox)));
+                _y = RandomHelpers.Next(Config.ZONE_MIN, Config.ZONE_MAX);
+
+                // On regarde d'abord si on touche le joueur
+                touche = Hitbox.IntersectsWith(player.Hitbox);
+
+                // Puis si on touche l'un des autres ennemis
+                foreach (Ennemi e in autres)
+                {
+                    if (Hitbox.IntersectsWith(e.Hitbox))
+                    {
+                        touche = true;
+                    }
+                }
+            } while (touche);
         }
 
         //Méthode Update qui permet de mettre à jours les infos de la positions de l'ennemis à chaque frames
