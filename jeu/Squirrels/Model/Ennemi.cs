@@ -88,13 +88,19 @@ namespace Squirrels.Model
                 _state = State.LEFT;
             }
 
-            if (autres.Any(e => e != this && Hitbox.IntersectsWith(e.Hitbox)))
+            bool chevauche = false;
+            foreach (Ennemi autre in autres)
+            {
+                if (autre != this && Hitbox.IntersectsWith(autre.Hitbox))
+                {
+                    chevauche = true;
+                }
+            }
+
+            if (chevauche)
             {
                 if (_state == State.LEFT) _state = State.RIGHT;
-                else
-                {
-                    _state = State.LEFT;
-                }
+                else _state = State.LEFT;
             }
         }
         public TirEnnemi Throw()

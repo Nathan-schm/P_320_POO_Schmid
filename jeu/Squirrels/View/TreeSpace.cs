@@ -120,7 +120,17 @@ namespace Squirrels
 
             for (int i = _tirjoueur.Count - 1; i >= 0; i--)
             {
-                Ennemi touche = _enemy.FirstOrDefault(e => e.Hitbox.IntersectsWith(_tirjoueur[i].Hitbox));
+
+                Ennemi touche = null;
+                foreach (Ennemi e in _enemy)
+                {
+                    if (e.Hitbox.IntersectsWith(_tirjoueur[i].Hitbox))
+                    {
+                        touche = e;
+                        break;      
+                    }
+                }
+
 
                 if (touche != null)
                 {
@@ -141,7 +151,16 @@ namespace Squirrels
 
             for (int a = _tirennemi.Count - 1; a >= 0; a--)
             {
-                Defense contact = _defense.FirstOrDefault(y => y.Hitbox.IntersectsWith(_tirennemi[a].Hitbox));
+                
+                Defense contact = null;
+                foreach (Defense d in _defense)
+                {
+                    if (d.Hitbox.IntersectsWith(_tirennemi[a].Hitbox))
+                    {
+                        contact = d;
+                        break;
+                    }
+                }
 
                 if (contact != null)
                 {
