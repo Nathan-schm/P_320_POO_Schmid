@@ -446,6 +446,26 @@
       "description": "gestion de la défaite",
       "duration": 30,
       "status": "DONE"
+    },
+    {
+      "id": "29b8ba5a-337d-4814-9e33-72b866524eb7",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-31T12:06:00.000Z",
+      "name": "Rapport ",
+      "description": "Finalisation du rapport de projet",
+      "duration": 20,
+      "status": "DONE"
+    },
+    {
+      "id": "62f6d796-58d9-4820-b431-06d7cd962f06",
+      "type": "commitless",
+      "author": "Nathan-schm",
+      "date": "2026-10-31T11:15:00.000Z",
+      "name": "Jeu",
+      "description": "Finalisation du jeu",
+      "duration": 60,
+      "status": "DONE"
     }
   ]
 }
