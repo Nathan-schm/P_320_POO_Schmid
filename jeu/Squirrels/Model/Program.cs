@@ -38,7 +38,7 @@ namespace Squirrels.Model
 
             //Déclare une nouvelle flotte d'ennemis
             List<Ennemi> enemy = new List<Ennemi>();
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Ennemi normal = new Ennemi(Ennemi.Race.NORMAL, 100);
                 normal.Spawn(player, enemy);

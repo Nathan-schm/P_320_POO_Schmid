@@ -8,10 +8,12 @@ namespace Squirrels
     // Cette partie de la classe Squirrel définit ce qu'est un squirrel par un modèle numérique
     public class Squirrel
     {
-        public int _x;                                 // Position en X depuis la gauche de l'espace aérien
-        public int _y;                                 // Position en Y depuis le haut de l'espace aérien
-        public int _vie;
+        public int _x;                                 // Position en X depuis la gauche de treespace
+        public int _y;                                 // Position en Y depuis le haut de treespace
         private int _recharge;
+        public int _vie;
+
+
 
         public Rectangle Hitbox => new Rectangle(_x - Config.PLAYER_WIDTH/2 +5, _y - Config.PLAYER_HEIGHT/2 +5, Config.PLAYER_WIDTH -10, Config.PLAYER_HEIGHT-10);
 
