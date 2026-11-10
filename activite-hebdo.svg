@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="396" viewBox="0 0 760 396" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="760" height="396" fill="#fcfcfb"/>
+<text x="56" y="28" font-size="17" font-weight="600" fill="#0b0b0b">Nathan Schmid  ·  CID2B</text>
+<text x="56" y="50" font-size="12.5" fill="#52514e">Lignes de code C# ajoutées ou modifiées par semaine · total 1 437 ajoutées, 381 supprimées, 41 commits</text>
+<line x1="56" x2="740" y1="314.0" y2="314.0" stroke="#9a9994" stroke-width="1"/>
+<text x="48" y="318.0" font-size="11" fill="#6b6a66" text-anchor="end">0</text>
+<line x1="56" x2="740" y1="255.0" y2="255.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="48" y="259.0" font-size="11" fill="#6b6a66" text-anchor="end">200</text>
+<line x1="56" x2="740" y1="196.0" y2="196.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="48" y="200.0" font-size="11" fill="#6b6a66" text-anchor="end">400</text>
+<line x1="56" x2="740" y1="137.0" y2="137.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="48" y="141.0" font-size="11" fill="#6b6a66" text-anchor="end">600</text>
+<line x1="56" x2="740" y1="78.0" y2="78.0" stroke="#e6e5e1" stroke-width="1"/>
+<text x="48" y="82.0" font-size="11" fill="#6b6a66" text-anchor="end">800</text>
+<text x="87.1" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">24.08</text>
+<text x="87.1" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S35</text>
+<text x="87.1" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">4 commits</text>
+<text x="149.3" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">31.08</text>
+<text x="149.3" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S36</text>
+<text x="149.3" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">1 commit</text>
+<text x="211.5" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">07.09</text>
+<text x="211.5" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S37</text>
+<text x="211.5" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">2 commits</text>
+<path d="M256.6,314.0 V264.9 Q256.6,260.9 260.6,260.9 H286.6 Q290.6,260.9 290.6,264.9 V314.0 Z" fill="#2a78d6"><title>Semaine du 14.09: +180 / -2 lignes, 4 commit(s)</title></path>
+<text x="273.6" y="254.9" font-size="11" fill="#0b0b0b" text-anchor="middle">180</text>
+<text x="273.6" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">14.09</text>
+<text x="273.6" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S38</text>
+<text x="273.6" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">4 commits</text>
+<path d="M318.8,314.0 V262.5 Q318.8,258.5 322.8,258.5 H348.8 Q352.8,258.5 352.8,262.5 V314.0 Z" fill="#2a78d6"><title>Semaine du 21.09: +188 / -182 lignes, 4 commit(s)</title></path>
+<text x="335.8" y="252.5" font-size="11" fill="#0b0b0b" text-anchor="middle">188</text>
+<text x="335.8" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">21.09</text>
+<text x="335.8" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S39</text>
+<text x="335.8" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">4 commits</text>
+<path d="M381.0,314.0 V267.3 Q381.0,263.3 385.0,263.3 H411.0 Q415.0,263.3 415.0,267.3 V314.0 Z" fill="#2a78d6"><title>Semaine du 28.09: +172 / -22 lignes, 4 commit(s)</title></path>
+<text x="398.0" y="257.3" font-size="11" fill="#0b0b0b" text-anchor="middle">172</text>
+<text x="398.0" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">28.09</text>
+<text x="398.0" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S40</text>
+<text x="398.0" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">4 commits</text>
+<path d="M443.2,314.0 V264.0 Q443.2,260.0 447.2,260.0 H473.2 Q477.2,260.0 477.2,264.0 V314.0 Z" fill="#2a78d6"><title>Semaine du 05.10: +183 / -93 lignes, 8 commit(s)</title></path>
+<text x="460.2" y="254.0" font-size="11" fill="#0b0b0b" text-anchor="middle">183</text>
+<text x="460.2" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">05.10</text>
+<text x="460.2" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S41</text>
+<text x="460.2" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">8 commits</text>
+<text x="522.4" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">12.10</text>
+<text x="522.4" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S42</text>
+<text x="522.4" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">—</text>
+<text x="584.5" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">19.10</text>
+<text x="584.5" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S43</text>
+<text x="584.5" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">—</text>
+<path d="M629.7,314.0 V107.4 Q629.7,103.4 633.7,103.4 H659.7 Q663.7,103.4 663.7,107.4 V314.0 Z" fill="#2a78d6"><title>Semaine du 26.10: +714 / -82 lignes, 14 commit(s)</title></path>
+<text x="646.7" y="97.4" font-size="11" fill="#0b0b0b" text-anchor="middle">714</text>
+<text x="646.7" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">26.10</text>
+<text x="646.7" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S44</text>
+<text x="646.7" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">14 commits</text>
+<text x="708.9" y="331.0" font-size="11" fill="#0b0b0b" text-anchor="middle">02.11</text>
+<text x="708.9" y="345.0" font-size="10" fill="#6b6a66" text-anchor="middle">S45</text>
+<text x="708.9" y="360.0" font-size="10" fill="#6b6a66" text-anchor="middle">—</text>
+<text x="740" y="390" font-size="9.5" fill="#8a8984" text-anchor="end">Fichiers .cs uniquement (hors *.Designer.cs, bin/, obj/, .vs/) · commits de l'enseignant exclus · généré le 08.11.2026</text>
+</svg>
